@@ -12,6 +12,7 @@ import { getAppConfig } from "../../config/app-config.js";
 import { CacheService } from "../cache/cache.service.js";
 import { DatabaseService } from "../database/database.service.js";
 import { DocumentsService } from "../documents/documents.service.js";
+import { MetricsService } from "../observability/metrics.service.js";
 
 @Injectable()
 export class ApplicationRagService {
@@ -22,13 +23,16 @@ export class ApplicationRagService {
     private readonly core: KnowledgeRagService,
     private readonly documents: DocumentsService,
     private readonly cache: CacheService,
-    private readonly database: DatabaseService
+    private readonly database: DatabaseService,
+    private readonly metrics: MetricsService
   ) {}
 
   async answer(request: ChatRequest, userId?: string): Promise<ChatResponse> {
+    const startedAt = Date.now();
     const cacheKey = this.cache.key("rag:answer", request);
     const cached = await this.cache.getJson<ChatResponse>(cacheKey);
     if (cached) {
+      this.metrics.recordRequest({ latencyMs: Date.now() - startedAt, answered: cached.confidence !== "low" });
       return cached;
     }
 
@@ -52,6 +56,7 @@ export class ApplicationRagService {
       };
       await this.persistMessage(request.question, response, userId);
       await this.cache.setJson(cacheKey, response, 300);
+      this.metrics.recordRequest({ latencyMs: Date.now() - startedAt, answered: false });
       return response;
     }
 
@@ -65,6 +70,7 @@ export class ApplicationRagService {
 
     await this.persistMessage(request.question, response, userId);
     await this.cache.setJson(cacheKey, response, 300);
+    this.metrics.recordRequest({ latencyMs: Date.now() - startedAt, answered: true, fallback: !this.openai });
     return response;
   }
 

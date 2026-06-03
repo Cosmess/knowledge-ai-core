@@ -9,6 +9,7 @@ import { FeedbackModule } from "./modules/feedback/feedback.module.js";
 import { HealthModule } from "./modules/health/health.module.js";
 import { IngestionModule } from "./modules/ingestion/ingestion.module.js";
 import { McpModule } from "./modules/mcp/mcp.module.js";
+import { ObservabilityModule } from "./modules/observability/observability.module.js";
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { McpModule } from "./modules/mcp/mcp.module.js";
     IngestionModule,
     ChatModule,
     McpModule,
-    FeedbackModule
+    FeedbackModule,
+    ObservabilityModule
   ]
 })
 export class AppModule {}
