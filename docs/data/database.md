@@ -1,8 +1,8 @@
-# Database
+# Banco De Dados
 
-MVP database: PostgreSQL with pgvector.
+Banco do MVP: PostgreSQL com pgvector.
 
-Tables:
+Tabelas:
 
 ```sql
 documents

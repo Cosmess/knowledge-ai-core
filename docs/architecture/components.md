@@ -1,59 +1,59 @@
-# Components
+# Componentes
 
 ## apps/knowledge-api
 
-NestJS API responsible for:
+API NestJS responsável por:
 
 - `/health`
 - `/chat`
 - `/mcp/search`
-- ingestion endpoints
-- document endpoints
-- feedback endpoints
-- authentication and authorization
-- OpenAPI generation
+- endpoints de ingestão
+- endpoints de documentos
+- endpoints de feedback
+- autenticação e autorização
+- geração de OpenAPI
 
 ## apps/dev-knowledge-mcp
 
-MCP server responsible for exposing tools to agents and IDEs.
+Servidor MCP responsável por expor tools para agentes e IDEs.
 
-The MCP server should not duplicate RAG logic. It should call the Knowledge API and return structured context with sources.
+O MCP Server não deve duplicar a lógica de RAG. Ele deve chamar a Knowledge API e retornar contexto estruturado com fontes.
 
 ## packages/rag-core
 
-Orchestrates:
+Orquestra:
 
-- question classification
+- classificação de perguntas
 - retrieval
-- prompt assembly
-- LLM calls
-- answer validation
-- fallback behavior
+- montagem de prompt
+- chamadas ao LLM
+- validação da resposta
+- comportamento de fallback
 
 ## packages/shared-types
 
-Shared contracts for API, MCP and internal packages.
+Contratos compartilhados pela API, MCP e packages internos.
 
 ## packages/vector-store
 
-Vector store abstraction. MVP target is PostgreSQL + pgvector.
+Abstração de vector store. O alvo do MVP é PostgreSQL + pgvector.
 
 ## packages/llm-providers
 
-Provider abstraction for OpenAI, Claude, Azure OpenAI and Ollama.
+Abstração de provedores para OpenAI, Claude, Azure OpenAI e Ollama.
 
 ## packages/confluence-client
 
-Confluence REST API client.
+Cliente para Confluence REST API.
 
 ## packages/markdown-loader
 
-Markdown reader, parser, frontmatter extractor and normalizer.
+Leitor, parser, extrator de frontmatter e normalizador de Markdown.
 
 ## packages/prompt-templates
 
-Versioned prompt templates by audience and domain.
+Templates de prompts versionados por audiência e domínio.
 
 ## packages/observability
 
-Logging, masking, metrics and tracing helpers.
+Helpers para logs, mascaramento, métricas e tracing.

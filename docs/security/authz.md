@@ -1,23 +1,23 @@
-# Authorization
+# Autorização
 
-Authorization must be enforced in the API.
+A autorização deve ser aplicada na API.
 
-The frontend may hide UI actions, but the API is the source of truth.
+O frontend pode esconder ações na interface, mas a API é a fonte de verdade.
 
-## Dimensions
+## Dimensões
 
 - role
 - user
-- tenant/company if applicable
+- tenant/company, se aplicável
 - spaceKey
 - audience
 - documentType
 - system
 
-## Examples
+## Exemplos
 
-`developer` can access technical docs and API docs for allowed spaces.
+`developer` pode acessar documentação técnica e documentação de API dos spaces permitidos.
 
-`operations` can access operational processes, FAQs and business rules for allowed spaces.
+`operations` pode acessar processos operacionais, FAQs e regras de negócio dos spaces permitidos.
 
-`admin` can trigger ingestion and reindex jobs.
+`admin` pode disparar ingestão e reindexação.

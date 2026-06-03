@@ -1,6 +1,6 @@
 # Docker
 
-Current Docker Compose services:
+Serviços atuais do Docker Compose:
 
 ```txt
 postgres
@@ -8,13 +8,13 @@ redis
 ollama
 ```
 
-Run:
+Executar:
 
 ```bash
 docker compose up -d
 ```
 
-Planned services:
+Serviços planejados:
 
 ```txt
 knowledge-api

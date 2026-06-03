@@ -1,24 +1,26 @@
-# Prompt Strategy
+# Estratégia De Prompts
 
-Prompts must be versioned.
+Os prompts devem ser versionados.
 
-## Developer Prompt
+As instruções finais enviadas para agentes/modelos podem permanecer em inglês quando isso ajudar compatibilidade, consistência de avaliação ou reutilização com providers internacionais. A documentação explicativa para humanos deve permanecer em português.
 
-Rules:
+## Prompt Para Desenvolvedores
 
-- use only retrieved context
-- cite sources
-- separate business rules from technical details
-- mention missing evidence
-- never expose secrets
-- identify conflicts between documents
+Regras:
 
-## Operations/Product Prompt
+- usar apenas contexto recuperado
+- citar fontes
+- separar regras de negócio de detalhes técnicos
+- mencionar quando faltar evidência
+- nunca expor segredos
+- identificar conflitos entre documentos
 
-Rules:
+## Prompt Para Operações/Produto
 
-- use only retrieved context
-- explain in simple language
-- prioritize process and business rules
-- avoid internal infrastructure details
-- recommend validation with owner team when operational risk exists
+Regras:
+
+- usar apenas contexto recuperado
+- explicar em linguagem simples
+- priorizar processo e regra de negócio
+- evitar detalhes internos de infraestrutura
+- recomendar validação com o time responsável quando houver risco operacional

@@ -1,32 +1,32 @@
-# Technical Decisions
+# Decisões Técnicas
 
-## Repository Split
+## Divisão De Repositórios
 
-Two repositories will be used:
+Serão usados dois repositórios:
 
 ```txt
 knowledge-ai-core
 knowledge-ai-web
 ```
 
-`knowledge-ai-core` contains backend, MCP, RAG and infrastructure.
+`knowledge-ai-core` contém backend, MCP, RAG e infraestrutura.
 
-`knowledge-ai-web` contains the Next.js frontend.
+`knowledge-ai-web` contém o frontend Next.js.
 
-## Contract Strategy
+## Estratégia De Contratos
 
-The API will expose OpenAPI/Swagger. The frontend should generate its client/types from OpenAPI instead of copying DTOs manually.
+A API expõe OpenAPI/Swagger. O frontend deve gerar client e tipos a partir do contrato OpenAPI, evitando cópia manual de DTOs.
 
 ## Vector Store
 
-MVP uses PostgreSQL + pgvector.
+O MVP usa PostgreSQL + pgvector.
 
-Other stores such as Qdrant, Pinecone or Weaviate can be added behind the `vector-store` abstraction later.
+Outros stores, como Qdrant, Pinecone ou Weaviate, podem ser adicionados futuramente atrás da abstração `vector-store`.
 
-## MCP Strategy
+## Estratégia MCP
 
-The MCP server calls the Knowledge API. This keeps retrieval, authorization and source filtering centralized in the API.
+O MCP Server chama a Knowledge API. Isso mantém retrieval, autorização e filtros de fontes centralizados na API.
 
-## Auth Strategy
+## Estratégia De Autenticação
 
-The API owns authorization decisions. The frontend can hide UI actions, but cannot be trusted as the source of permission truth.
+A API é responsável pelas decisões de autorização. O frontend pode esconder ações na interface, mas não é fonte confiável de permissão.

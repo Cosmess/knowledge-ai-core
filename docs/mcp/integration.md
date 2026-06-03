@@ -1,6 +1,6 @@
-# MCP Integration
+# Integração MCP
 
-The MCP server uses stdio transport and calls the Knowledge API.
+O MCP Server usa transporte `stdio` e chama a Knowledge API.
 
 ```txt
 IDE/Agent
@@ -10,21 +10,21 @@ IDE/Agent
   -> structured context
 ```
 
-## Environment
+## Ambiente
 
 ```env
 KNOWLEDGE_API_BASE_URL=http://localhost:3000
 ```
 
-## Why MCP Calls API
+## Por Que O MCP Chama A API
 
-Centralizing retrieval in the API keeps:
+Centralizar o retrieval na API mantém:
 
-- authorization
-- document filtering
-- source ranking
-- logging
+- autorização
+- filtros de documentos
+- ranking de fontes
+- logs
 - LLMOps
-- sensitive data masking
+- mascaramento de dados sensíveis
 
-in one backend path.
+em um único caminho de backend.

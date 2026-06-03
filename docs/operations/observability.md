@@ -1,22 +1,22 @@
-# Observability
+# Observabilidade
 
-Track:
+Monitorar:
 
-- request latency
-- model latency
-- token usage
-- model name
-- fallback events
-- retrieved document count
-- retrieved document scores
-- unanswered questions
+- latência de request
+- latência do modelo
+- uso de tokens
+- nome do modelo
+- eventos de fallback
+- quantidade de documentos recuperados
+- scores dos documentos recuperados
+- perguntas sem resposta
 - feedback
 
-Avoid logging secrets and unmasked sensitive data.
+Evitar logs de segredos e dados sensíveis sem mascaramento.
 
-Future tooling:
+Ferramentas futuras:
 
 - OpenTelemetry
 - Prometheus
 - Grafana
-- structured logs
+- logs estruturados

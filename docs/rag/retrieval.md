@@ -1,16 +1,16 @@
 # Retrieval
 
-Retrieval must support:
+O retrieval deve suportar:
 
-- semantic search
-- keyword search
-- hybrid search
-- filters by domain
-- filters by audience
-- filters by system
-- filters by space
-- filters by document type
-- filters by updated date and version
+- busca semântica
+- busca por palavra-chave
+- busca híbrida
+- filtros por domínio
+- filtros por audiência
+- filtros por sistema
+- filtros por space
+- filtros por tipo de documento
+- filtros por data de atualização e versão
 
 MVP:
 
@@ -18,7 +18,7 @@ MVP:
 PostgreSQL + pgvector similarity search
 ```
 
-Later:
+Depois:
 
 ```txt
 hybrid search with text ranking + vector score

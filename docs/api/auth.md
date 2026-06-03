@@ -1,10 +1,10 @@
-# API Authentication
+# Autenticação Da API
 
-The API must validate authentication and authorization on every sensitive endpoint.
+A API deve validar autenticação e autorização em todos os endpoints sensíveis.
 
-## MVP Options
+## Opções Para O MVP
 
-Preferred corporate option:
+Opção corporativa preferencial:
 
 ```txt
 External identity provider
@@ -12,7 +12,7 @@ External identity provider
   -> API validates issuer, audience, signature and roles
 ```
 
-Acceptable MVP option:
+Opção aceitável para MVP:
 
 ```txt
 POST /auth/login
@@ -31,7 +31,7 @@ support
 viewer
 ```
 
-## Authorization Dimensions
+## Dimensões De Autorização
 
 - role
 - space

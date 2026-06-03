@@ -1,17 +1,17 @@
 # Chunking
 
-Chunking must preserve enough context for a retrieved excerpt to be useful.
+O chunking deve preservar contexto suficiente para que um trecho recuperado seja útil.
 
-Rules:
+Regras:
 
-- preserve headings
-- preserve document metadata
-- keep source reference
-- avoid overly large chunks
-- separate by document type when useful
-- include parent section titles
+- preservar headings
+- preservar metadados do documento
+- manter referência à fonte
+- evitar chunks grandes demais
+- separar por tipo de documento quando fizer sentido
+- incluir títulos de seções pai
 
-Initial strategy:
+Estratégia inicial:
 
 ```txt
 split by heading

@@ -1,19 +1,19 @@
-# Evaluation
+# Avaliação
 
-Initial quality checks:
+Checagens iniciais de qualidade:
 
-- answer cites sources when evidence exists
-- answer refuses when evidence is insufficient
-- answer does not use unauthorized documents
-- answer classifies domain correctly enough for retrieval
-- answer does not expose secrets
+- a resposta cita fontes quando há evidência
+- a resposta recusa quando a evidência é insuficiente
+- a resposta não usa documentos não autorizados
+- a resposta classifica o domínio corretamente o bastante para retrieval
+- a resposta não expõe segredos
 
-Metrics:
+Métricas:
 
-- retrieval score
+- score de retrieval
 - confidence
-- feedback rating
-- unanswered rate
-- fallback rate
-- latency
-- token usage
+- feedback do usuário
+- taxa de perguntas sem resposta
+- taxa de fallback
+- latência
+- uso de tokens

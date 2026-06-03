@@ -1,22 +1,22 @@
 # LLMOps
 
-Version:
+Versionar:
 
 - prompts
-- embedding models
-- chat models
-- chunking strategy
-- retrieval configuration
-- indexed document versions
+- modelos de embedding
+- modelos de chat
+- estratégia de chunking
+- configuração de retrieval
+- versões de documentos indexados
 
-Measure:
+Medir:
 
-- latency
-- cost
-- input tokens
-- output tokens
-- fallback rate
-- unanswered rate
-- feedback score
+- latência
+- custo
+- tokens de entrada
+- tokens de saída
+- taxa de fallback
+- taxa de perguntas sem resposta
+- score de feedback
 
-Store enough metadata to reproduce why a response was generated.
+Armazenar metadados suficientes para reproduzir por que uma resposta foi gerada.

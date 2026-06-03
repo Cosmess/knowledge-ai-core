@@ -1,6 +1,6 @@
-# API Endpoints
+# Endpoints Da API
 
-## Implemented in Scaffold
+## Implementados No Scaffold
 
 ```http
 GET /health
@@ -8,7 +8,7 @@ POST /chat
 POST /mcp/search
 ```
 
-## Planned
+## Planejados
 
 ```http
 POST /auth/login

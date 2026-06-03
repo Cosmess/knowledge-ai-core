@@ -1,6 +1,6 @@
-# Metadata Taxonomy
+# Taxonomia De Metadados
 
-## Domains
+## Domínios
 
 ```txt
 technical
@@ -16,7 +16,7 @@ runbook
 troubleshooting
 ```
 
-## Document Types
+## Tipos De Documento
 
 ```txt
 technical_doc
@@ -35,7 +35,7 @@ database_doc
 integration_doc
 ```
 
-## Required Metadata
+## Metadados Obrigatórios
 
 ```json
 {

@@ -1,18 +1,18 @@
 # OpenAPI
 
-The NestJS API exposes Swagger/OpenAPI at:
+A API NestJS expõe Swagger/OpenAPI em:
 
 ```txt
 /docs
 ```
 
-The frontend repository should generate a client from the OpenAPI contract.
+O repositório frontend deve gerar client e tipos a partir do contrato OpenAPI.
 
-Recommended tooling:
+Ferramentas recomendadas:
 
 ```txt
 openapi-typescript
 openapi-fetch
 ```
 
-This avoids manual DTO duplication between `knowledge-ai-core` and `knowledge-ai-web`.
+Isso evita duplicação manual de DTOs entre `knowledge-ai-core` e `knowledge-ai-web`.

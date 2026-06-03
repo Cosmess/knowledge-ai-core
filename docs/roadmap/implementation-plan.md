@@ -1,48 +1,48 @@
-# Implementation Plan
+# Plano De Implementação
 
-## Phase 1: Core Scaffold
+## Fase 1: Scaffold Core
 
-- Create monorepo.
-- Create API app.
-- Create MCP app.
-- Create shared packages.
-- Create SDD docs.
+- Criar monorepo.
+- Criar app da API.
+- Criar app MCP.
+- Criar packages compartilhados.
+- Criar documentação SDD.
 
-## Phase 2: Backend API
+## Fase 2: Backend API
 
-- Add authentication.
-- Add OpenAPI.
-- Add chat endpoint.
-- Add MCP search endpoint.
-- Add document endpoints.
+- Adicionar autenticação.
+- Adicionar OpenAPI.
+- Adicionar endpoint de chat.
+- Adicionar endpoint de busca MCP.
+- Adicionar endpoints de documentos.
 
-## Phase 3: Markdown RAG
+## Fase 3: Markdown RAG
 
-- Load Markdown.
-- Parse frontmatter.
-- Chunk content.
-- Generate embeddings.
-- Store chunks in pgvector.
-- Retrieve context.
+- Carregar Markdown.
+- Fazer parse de frontmatter.
+- Gerar chunks.
+- Gerar embeddings.
+- Armazenar chunks em pgvector.
+- Recuperar contexto.
 
-## Phase 4: MCP
+## Fase 4: MCP
 
-- Add initial tools.
-- Integrate with API.
-- Return structured sources.
-- Test with IDE/agent clients.
+- Adicionar tools iniciais.
+- Integrar com a API.
+- Retornar fontes estruturadas.
+- Testar com clientes IDE/agentes.
 
-## Phase 5: Confluence
+## Fase 5: Confluence
 
-- Fetch pages.
-- Normalize HTML.
-- Track versions.
-- Reindex changed pages.
+- Buscar páginas.
+- Normalizar HTML.
+- Controlar versões.
+- Reindexar páginas alteradas.
 
-## Phase 6: Security and LLMOps
+## Fase 6: Segurança E LLMOps
 
-- Add authorization.
-- Add logging and metrics.
-- Mask sensitive data.
-- Add fallback providers.
-- Add answer evaluation.
+- Adicionar autorização.
+- Adicionar logs e métricas.
+- Mascarar dados sensíveis.
+- Adicionar fallback de providers.
+- Adicionar avaliação de respostas.

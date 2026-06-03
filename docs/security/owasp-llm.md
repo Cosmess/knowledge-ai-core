@@ -1,22 +1,22 @@
-# OWASP LLM Controls
+# Controles OWASP LLM
 
-Risks:
+Riscos:
 
 - prompt injection
-- sensitive data leakage
-- tool misuse
-- excessive agency
-- hallucination
-- insecure output handling
-- untrusted retrieved context
+- vazamento de dados sensíveis
+- uso indevido de tools
+- autonomia excessiva
+- alucinação
+- tratamento inseguro de saída
+- contexto recuperado não confiável
 
-Controls:
+Controles:
 
-- use only authorized retrieved context
-- cite sources
-- refuse when evidence is insufficient
-- sanitize ingested documents
-- mask sensitive logs
-- validate inputs
-- limit MCP tool responses
-- never expose credentials or tokens
+- usar apenas contexto recuperado e autorizado
+- citar fontes
+- recusar quando a evidência for insuficiente
+- sanitizar documentos ingeridos
+- mascarar logs sensíveis
+- validar entradas
+- limitar respostas das tools MCP
+- nunca expor credenciais ou tokens

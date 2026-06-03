@@ -1,15 +1,15 @@
-# RAG Ingestion
+# Ingestão RAG
 
-Sources:
+Fontes:
 
-- Markdown files
-- Confluence pages
-- OpenAPI/Swagger documents
-- repository docs
+- arquivos Markdown
+- páginas do Confluence
+- documentos OpenAPI/Swagger
+- documentação em repositórios
 - runbooks
-- backlog/user stories
+- backlog e histórias de usuário
 
-## Markdown Flow
+## Fluxo Markdown
 
 ```txt
 read files
@@ -22,7 +22,7 @@ read files
   -> save chunks
 ```
 
-## Confluence Flow
+## Fluxo Confluence
 
 ```txt
 fetch pages by space

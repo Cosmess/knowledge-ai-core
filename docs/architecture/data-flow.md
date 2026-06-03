@@ -1,6 +1,6 @@
-# Data Flow
+# Fluxo de Dados
 
-## Ingestion Flow
+## Fluxo De Ingestão
 
 ```txt
 Source document
@@ -13,7 +13,7 @@ Source document
   -> index vectors
 ```
 
-## Chat Flow
+## Fluxo De Chat
 
 ```txt
 Authenticated user
@@ -27,7 +27,7 @@ Authenticated user
   -> return answer + sources
 ```
 
-## MCP Flow
+## Fluxo MCP
 
 ```txt
 Agent/IDE
@@ -37,3 +37,5 @@ Agent/IDE
   -> retrieve structured context
   -> return sources and excerpts to agent
 ```
+
+Os diagramas acima mantêm os nomes técnicos em inglês porque eles representam etapas internas do pipeline e contratos entre componentes.

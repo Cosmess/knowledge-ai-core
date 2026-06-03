@@ -1,6 +1,6 @@
-# MCP Tools
+# Tools MCP
 
-Initial tools:
+Tools iniciais:
 
 ```txt
 search_technical_docs
@@ -22,11 +22,11 @@ get_service_context
 }
 ```
 
-Only `query` is required.
+Apenas `query` é obrigatório.
 
 ## Output
 
-The MCP server returns structured JSON as text content:
+O MCP Server retorna JSON estruturado como conteúdo de texto:
 
 ```json
 {
@@ -37,6 +37,6 @@ The MCP server returns structured JSON as text content:
 }
 ```
 
-## Rule
+## Regra
 
-MCP tools must return sources and evidence. If there is not enough evidence, they must say so.
+As tools MCP devem retornar fontes e evidências. Se não houver evidência suficiente, devem informar isso explicitamente.

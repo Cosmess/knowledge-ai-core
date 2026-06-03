@@ -1,21 +1,21 @@
-# Architecture Overview
+# Visão de Arquitetura
 
-`knowledge-ai-core` is the backend repository for the Knowledge AI Platform.
+`knowledge-ai-core` é o repositório backend da Knowledge AI Platform.
 
-It contains:
+Ele contém:
 
-- NestJS API.
-- MCP Server for IDEs and AI agents.
-- RAG orchestration.
-- Markdown and Confluence ingestion.
-- Vector search with PostgreSQL + pgvector.
-- Redis cache.
-- LLM provider abstraction.
-- Security, observability and LLMOps.
+- API NestJS.
+- MCP Server para IDEs e agentes de IA.
+- Orquestração RAG.
+- Ingestão de Markdown e Confluence.
+- Busca vetorial com PostgreSQL + pgvector.
+- Cache Redis.
+- Abstração de provedores de LLM.
+- Segurança, observabilidade e LLMOps.
 
-The frontend is intentionally separated into `knowledge-ai-web` and consumes this API through authenticated HTTP calls.
+O frontend fica separado no repositório `knowledge-ai-web` e consome esta API por chamadas HTTP autenticadas.
 
-## High-Level Flow
+## Fluxo De Alto Nível
 
 ```txt
 Confluence / Markdown / OpenAPI

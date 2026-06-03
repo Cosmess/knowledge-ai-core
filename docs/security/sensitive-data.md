@@ -1,14 +1,14 @@
-# Sensitive Data
+# Dados Sensíveis
 
-Never log:
+Nunca registrar em logs:
 
 - access tokens
 - refresh tokens
 - API keys
-- passwords
-- secrets
-- raw sensitive customer data
+- senhas
+- segredos
+- dados sensíveis brutos de clientes
 
-Mask sensitive data before structured logging.
+Dados sensíveis devem ser mascarados antes de logs estruturados.
 
-The `observability` package provides initial masking helpers and should be expanded as concrete data types are identified.
+O package `observability` fornece helpers iniciais de mascaramento e deve ser expandido conforme tipos concretos de dados forem identificados.

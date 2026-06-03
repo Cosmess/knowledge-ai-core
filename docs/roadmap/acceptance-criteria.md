@@ -1,16 +1,16 @@
-# Acceptance Criteria
+# Critérios De Aceite
 
-The project is functional when:
+O projeto é considerado funcional quando:
 
-- API can ingest Markdown.
-- API can ingest Confluence pages.
-- Documents are split into chunks.
-- Embeddings are stored in pgvector.
-- `/chat` answers using retrieved context.
-- Answers cite sources.
-- MCP can search technical context.
-- MCP responses include sources and evidence status.
-- API refuses to answer when evidence is insufficient.
-- Frontend can consume OpenAPI contracts.
-- Project runs through Docker Compose.
-- Sensitive data is not exposed in logs or answers.
+- a API consegue ingerir Markdown;
+- a API consegue ingerir páginas do Confluence;
+- documentos são quebrados em chunks;
+- embeddings são armazenados no pgvector;
+- `/chat` responde usando contexto recuperado;
+- respostas citam fontes;
+- o MCP consegue buscar contexto técnico;
+- respostas MCP incluem fontes e status de evidência;
+- a API recusa responder quando a evidência é insuficiente;
+- o frontend consegue consumir contratos OpenAPI;
+- o projeto roda com Docker Compose;
+- dados sensíveis não são expostos em logs ou respostas.
