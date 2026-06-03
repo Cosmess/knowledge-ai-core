@@ -354,6 +354,7 @@ Principais documentos:
 - [Fluxo de dados](docs/architecture/data-flow.md)
 - [Decisões técnicas](docs/architecture/decisions.md)
 - [Endpoints da API](docs/api/endpoints.md)
+- [Exemplos práticos com cURL](docs/api/curl-examples.md)
 - [Autenticação](docs/api/auth.md)
 - [Tools MCP](docs/mcp/tools.md)
 - [Configuração de clientes MCP](docs/mcp/client-configuration.md)

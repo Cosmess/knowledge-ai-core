@@ -11,6 +11,7 @@ Ela registra arquitetura, decisões técnicas, contratos de API, tools MCP, dese
 - [Fluxo de Dados](architecture/data-flow.md)
 - [Decisões Técnicas](architecture/decisions.md)
 - [Endpoints da API](api/endpoints.md)
+- [Exemplos cURL](api/curl-examples.md)
 - [Autenticação da API](api/auth.md)
 - [Contrato OpenAPI](api/openapi.md)
 - [Tools MCP](mcp/tools.md)
