@@ -14,3 +14,10 @@ O projeto é considerado funcional quando:
 - o frontend consegue consumir contratos OpenAPI;
 - o projeto roda com Docker Compose;
 - dados sensíveis não são expostos em logs ou respostas.
+
+Critérios ainda dependentes do `knowledge-ai-web`:
+
+- frontend autenticado;
+- chat web;
+- histórico visual;
+- feedback pela interface.

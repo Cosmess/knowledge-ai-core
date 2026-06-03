@@ -132,15 +132,10 @@ Endpoints já criados:
 
 ```http
 GET /health
-POST /chat
-POST /mcp/search
-```
-
-Endpoints planejados:
-
-```http
 POST /auth/login
 GET /auth/me
+POST /chat
+POST /mcp/search
 POST /ingest/markdown
 POST /ingest/confluence
 POST /reindex
@@ -148,6 +143,7 @@ GET /documents
 GET /documents/:id
 GET /spaces
 POST /feedback
+GET /metrics
 ```
 
 ### `apps/dev-knowledge-mcp`
@@ -590,22 +586,24 @@ Status: concluído.
 Implementado:
 
 - estrutura inicial do monorepo;
-- API NestJS com health, chat e MCP search;
+- API NestJS com health, auth, chat, MCP search, ingestão, documentos, feedback e métricas;
 - MCP Server com tools iniciais;
 - contracts em `shared-types`;
-- core RAG inicial;
+- core RAG com classificação, embeddings, pgvector, cache, fontes e fallback;
+- ingestão Markdown;
+- ingestão Confluence;
+- autenticação JWT e guards por role;
+- feedback e histórico de mensagens;
+- métricas LLMOps em memória;
 - SDD em `docs/`;
 - Docker Compose com Postgres/pgvector, Redis e Ollama;
 - build TypeScript validado.
 
 Ainda pendente:
 
-- autenticação real;
-- persistência em banco;
-- embeddings reais;
-- integração pgvector;
-- ingestão Markdown real;
-- ingestão Confluence real;
-- providers OpenAI/Claude/Ollama;
-- testes automatizados;
-- CI/CD.
+- autorização fina por documento/space/audience em todos os fluxos de retrieval;
+- testes de integração com Postgres/pgvector;
+- provider Claude e Azure OpenAI;
+- empacotamento/distribuição do MCP;
+- testes reais em clientes MCP como Codex, Cursor e VS Code;
+- repositório frontend `knowledge-ai-web`.

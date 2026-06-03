@@ -4,15 +4,10 @@
 
 ```http
 GET /health
-POST /chat
-POST /mcp/search
-```
-
-## Planejados
-
-```http
 POST /auth/login
 GET /auth/me
+POST /chat
+POST /mcp/search
 POST /ingest/markdown
 POST /ingest/confluence
 POST /reindex
@@ -20,6 +15,7 @@ GET /documents
 GET /documents/:id
 GET /spaces
 POST /feedback
+GET /metrics
 ```
 
 ## POST /chat
@@ -43,6 +39,48 @@ Response:
   "domain": "business_rule",
   "sources": [],
   "confidence": "low"
+}
+```
+
+## POST /auth/login
+
+Request:
+
+```json
+{
+  "email": "admin@example.com",
+  "password": "admin"
+}
+```
+
+Response:
+
+```json
+{
+  "accessToken": "jwt",
+  "tokenType": "Bearer",
+  "expiresIn": 3600
+}
+```
+
+## POST /ingest/markdown
+
+Request:
+
+```json
+{
+  "rootDir": "docs",
+  "spaceKey": "ENG"
+}
+```
+
+Response:
+
+```json
+{
+  "jobId": "uuid",
+  "documentsProcessed": 10,
+  "chunksProcessed": 42
 }
 ```
 
