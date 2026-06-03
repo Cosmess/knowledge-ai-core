@@ -360,6 +360,7 @@ Principais documentos:
 - [Endpoints da API](docs/api/endpoints.md)
 - [Autenticação](docs/api/auth.md)
 - [Tools MCP](docs/mcp/tools.md)
+- [Configuração de clientes MCP](docs/mcp/client-configuration.md)
 - [Ingestão RAG](docs/rag/ingestion.md)
 - [Retrieval](docs/rag/retrieval.md)
 - [Banco de dados](docs/data/database.md)
@@ -435,6 +436,24 @@ O MCP usa a variável:
 
 ```env
 KNOWLEDGE_API_BASE_URL=http://localhost:3000
+```
+
+### Configurar Clientes MCP
+
+O MCP atual usa transporte `stdio` e pode ser conectado a clientes que executam comandos locais.
+
+Exemplos incluídos:
+
+```txt
+.codex/config.toml.example
+.cursor/mcp.json.example
+.vscode/mcp.json.example
+```
+
+Documentação:
+
+```txt
+docs/mcp/client-configuration.md
 ```
 
 ## Variáveis De Ambiente

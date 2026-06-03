@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "dev-knowledge-mcp": {
+      "type": "stdio",
+      "command": "pnpm",
+      "args": ["--dir", "C:\\projetos\\knowledge-ai-core", "dev:mcp"],
+      "env": {
+        "KNOWLEDGE_API_BASE_URL": "http://localhost:3000"
+      }
+    }
+  }
+}

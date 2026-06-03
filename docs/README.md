@@ -15,6 +15,7 @@ It records architecture, implementation decisions, API contracts, MCP tools, RAG
 - [OpenAPI Contract](api/openapi.md)
 - [MCP Tools](mcp/tools.md)
 - [MCP Integration](mcp/integration.md)
+- [MCP Client Configuration](mcp/client-configuration.md)
 - [RAG Ingestion](rag/ingestion.md)
 - [RAG Chunking](rag/chunking.md)
 - [RAG Retrieval](rag/retrieval.md)
