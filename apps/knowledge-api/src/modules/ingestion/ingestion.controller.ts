@@ -7,12 +7,16 @@ import {
 } from "@knowledge-ai/shared-types";
 import { MarkdownIngestionService } from "./markdown-ingestion.service.js";
 import { Roles, RolesGuard } from "../auth/roles.guard.js";
+import { ConfluenceIngestionService } from "./confluence-ingestion.service.js";
 
 @ApiTags("ingestion")
 @Controller()
 @UseGuards(RolesGuard)
 export class IngestionController {
-  constructor(private readonly markdown: MarkdownIngestionService) {}
+  constructor(
+    private readonly markdown: MarkdownIngestionService,
+    private readonly confluence: ConfluenceIngestionService
+  ) {}
 
   @Post("ingest/markdown")
   @Roles("admin")
@@ -34,11 +38,7 @@ export class IngestionController {
   @Roles("admin")
   @ApiBody({ type: ConfluenceIngestionRequestDto })
   @ApiOkResponse({ description: "Confluence ingestion placeholder." })
-  ingestConfluence(): IngestionResponse {
-    return {
-      jobId: "not-implemented",
-      documentsProcessed: 0,
-      chunksProcessed: 0
-    };
+  ingestConfluence(@Body() request: ConfluenceIngestionRequestDto): Promise<IngestionResponse> {
+    return this.confluence.ingest(request);
   }
 }
