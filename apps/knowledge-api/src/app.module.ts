@@ -1,4 +1,5 @@
 import { Module } from "@nestjs/common";
+import { AuthModule } from "./modules/auth/auth.module.js";
 import { ChatModule } from "./modules/chat/chat.module.js";
 import { CacheModule } from "./modules/cache/cache.module.js";
 import { DatabaseModule } from "./modules/database/database.module.js";
@@ -12,6 +13,7 @@ import { McpModule } from "./modules/mcp/mcp.module.js";
 @Module({
   imports: [
     CacheModule,
+    AuthModule,
     DatabaseModule,
     EmbeddingsModule,
     HealthModule,
