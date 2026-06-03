@@ -1,0 +1,17 @@
+{
+  "name": "@knowledge-ai/shared-types",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "@nestjs/swagger": "^7.4.0",
+    "class-validator": "^0.14.1"
+  }
+}
