@@ -1,12 +1,12 @@
 import { Body, Controller, Post } from "@nestjs/common";
 import { ApiBody, ApiOkResponse, ApiTags } from "@nestjs/swagger";
-import { KnowledgeRagService } from "@knowledge-ai/rag-core";
 import { ChatRequestDto, ChatResponse } from "@knowledge-ai/shared-types";
+import { ApplicationRagService } from "../rag/rag.service.js";
 
 @ApiTags("chat")
 @Controller("chat")
 export class ChatController {
-  constructor(private readonly ragService: KnowledgeRagService) {}
+  constructor(private readonly ragService: ApplicationRagService) {}
 
   @Post()
   @ApiBody({ type: ChatRequestDto })

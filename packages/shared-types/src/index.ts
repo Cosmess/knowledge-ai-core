@@ -1,5 +1,5 @@
 import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
-import { IsIn, IsInt, IsOptional, IsString, Max, Min } from "class-validator";
+import { IsBoolean, IsIn, IsInt, IsOptional, IsString, Max, Min } from "class-validator";
 
 export type Audience = "developers" | "operations" | "product" | "onboarding" | "support";
 
@@ -34,12 +34,28 @@ export type DocumentType =
 export type Confidence = "low" | "medium" | "high";
 
 export interface KnowledgeSource {
+  id?: string;
   title: string;
   source: "confluence" | "markdown" | "openapi" | "repository";
   url?: string;
   documentType: DocumentType;
   content?: string;
   score?: number;
+}
+
+export interface KnowledgeDocument {
+  id: string;
+  source: KnowledgeSource["source"];
+  title: string;
+  url?: string;
+  documentType: DocumentType;
+  audience: Audience;
+  domain: QuestionDomain;
+  spaceKey?: string;
+  system?: string;
+  version?: string;
+  updatedAt?: string;
+  createdAt: string;
 }
 
 export interface ChatRequest {
@@ -70,6 +86,30 @@ export interface McpSearchResponse {
   domain: QuestionDomain;
   results: KnowledgeSource[];
   evidenceStatus: "found" | "insufficient";
+}
+
+export interface LoginResponse {
+  accessToken: string;
+  tokenType: "Bearer";
+  expiresIn: number;
+}
+
+export interface AuthUser {
+  sub: string;
+  email: string;
+  roles: string[];
+  spaces: string[];
+}
+
+export interface IngestionResponse {
+  jobId: string;
+  documentsProcessed: number;
+  chunksProcessed: number;
+}
+
+export interface FeedbackResponse {
+  id: string;
+  createdAt: string;
 }
 
 const audiences: Audience[] = ["developers", "operations", "product", "onboarding", "support"];
@@ -138,4 +178,52 @@ export class McpSearchRequestDto implements McpSearchRequest {
   @Min(1)
   @Max(20)
   limit?: number;
+}
+
+export class LoginRequestDto {
+  @ApiProperty()
+  @IsString()
+  email!: string;
+
+  @ApiProperty()
+  @IsString()
+  password!: string;
+}
+
+export class MarkdownIngestionRequestDto {
+  @ApiPropertyOptional({ default: "docs" })
+  @IsOptional()
+  @IsString()
+  rootDir?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  spaceKey?: string;
+}
+
+export class ConfluenceIngestionRequestDto {
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  spaceKey?: string;
+}
+
+export class FeedbackRequestDto {
+  @ApiProperty()
+  @IsString()
+  question!: string;
+
+  @ApiProperty()
+  @IsString()
+  answer!: string;
+
+  @ApiProperty()
+  @IsBoolean()
+  useful!: boolean;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  comment?: string;
 }

@@ -1,9 +1,9 @@
 import { Module } from "@nestjs/common";
-import { RagCoreModule } from "../../providers/rag-core.module.js";
+import { RagModule } from "../rag/rag.module.js";
 import { ChatController } from "./chat.controller.js";
 
 @Module({
-  imports: [RagCoreModule],
+  imports: [RagModule],
   controllers: [ChatController]
 })
 export class ChatModule {}

@@ -30,7 +30,7 @@ export class KnowledgeRagService {
     };
   }
 
-  private classifyQuestion(question: string): QuestionDomain {
+  classifyQuestion(question: string): QuestionDomain {
     const normalized = question.toLowerCase();
 
     if (this.includesAny(normalized, ["endpoint", "payload", "swagger", "api"])) {
